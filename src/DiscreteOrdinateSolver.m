@@ -181,7 +181,7 @@ classdef DiscreteOrdinateSolver
             %% Has not started working on this function yet
         end
         
-        function obj = get_fem_basis(obj)
+        function obj = get_fem_basis(x,y)
             % Function Name: get_fem_basis
             % Breif: Get the polynomial basis of degree 2 in a sqaure
             %           [0, 1] X [0, 1]
@@ -189,8 +189,8 @@ classdef DiscreteOrdinateSolver
             %           polynomials are for nodes (0, 0), (0, 1), (1, 1), (1,0),
             %           (0, 0.5), (0.5, 1), (1, 0.5), (0.5, 0) in order
             %% 
-            x=obj.x;
-            y=obj.y;
+            
+      
             POLY=[1;x;y;x^2;x*y;y^2;x^2*y;x*y^2];
             %A=[1,0,0,0,0,0,0,0;
             %   1,0,1,0,0,1,0,0;
